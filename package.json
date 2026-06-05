@@ -1,0 +1,21 @@
+{
+  "name": "library-fs",
+  "version": "1.0.0",
+  "description": "1. Creating folder for project and adding README.md file. Add git to the project to control it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mamartam/library-fs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mamartam/library-fs/issues"
+  },
+  "homepage": "https://github.com/mamartam/library-fs#readme"
+}
