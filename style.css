@@ -1,29 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 40px;
   background: #f4f4f9;
+  color: #333;
+  padding: 20px;
 }
-.box {
+
+.manage-app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.manage-app__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.manage-app__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.manage-app__actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card-box {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  max-width: 400px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
-input {
-  padding: 8px;
-  width: 70%;
-  margin-right: 10px;
+
+.card-box__title {
+  font-size: 20px;
+  margin-bottom: 15px;
 }
-button {
-  padding: 8px 15px;
-  cursor: pointer;
+
+.card-box__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-ul {
+
+.card-box__list {
   margin-top: 20px;
   padding-left: 20px;
 }
-li {
+
+.card-box__list li {
   margin-bottom: 8px;
   font-size: 18px;
+}
+
+.card-box--hidden {
+  display: none !important;
+}
+
+.form-author,
+.form-book,
+.form-edit,
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-author__input,
+.form-book__input,
+.form-edit__input,
+.search-box__input,
+.form-book__select,
+.form-edit__select {
+  padding: 8px;
+  flex: 1 1 200px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-author__button,
+.form-book__button,
+.form-edit__button,
+.btn-export {
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.form-author__button:hover,
+.form-book__button:hover,
+.form-edit__button:hover,
+.btn-export:hover {
+  background-color: #0056b3;
+}
+
+.btn-export {
+  background-color: #28a745;
+  width: 100%;
+}
+
+.btn-export:hover {
+  background-color: #218838;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 40px;
+  }
+
+  .manage-app__title {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .manage-app__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-box,
+  .manage-app__actions {
+    grid-column: span 2;
+  }
+
+  .btn-export {
+    width: auto;
+  }
+
+  .card-box__form {
+    flex-direction: row;
+    align-items: center;
+  }
 }
