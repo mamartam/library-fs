@@ -14,3 +14,14 @@ CREATE TABLE authors (
     id INT AUTO_INCREMENT PRIMARY KEY,
     author_name VARCHAR(255) NOT NULL
 );`
+7. Create html file and add basic structure - form for adding new authors. And also add css file for styles.
+8. Add code to the server.js file and main.js to connect database and get/put data.
+9. Create new table for books in sql workbranch
+   `CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    book_title VARCHAR(255) NOT NULL,
+    author_id INT,
+    FOREIGN KEY (author_id) REFERENCES authors(id)
+    ON DELETE CASCADE
+);`
+10.
