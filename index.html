@@ -7,21 +7,86 @@
     <title>User-friendly web application</title>
   </head>
   <body>
-    <h1>Library</h1>
+    <main class="manage-app">
+      <h1 class="manage-app__title">Library</h1>
 
-    <div class="box">
-      <form class="add-author">
-        <input
-          type="text"
-          id="author-name"
-          placeholder="Name of author: "
-          required
-        />
-        <button type="submit">Add</button>
-      </form>
+      <div class="manage-app__grid">
+        <section class="card-box">
+          <form class="card-box__form form-author">
+            <input
+              type="text"
+              id="author-name"
+              class="form-author__input"
+              placeholder="Name of author"
+              required
+            />
+            <button type="submit" class="form-author__button">add</button>
+          </form>
 
-      <ul class="list-of-authors"></ul>
-    </div>
+          <ul class="card-box__list list-authors"></ul>
+        </section>
+
+        <section class="search-box">
+          <h2 class="search-box__title">Search</h2>
+          <input
+            type="text"
+            id="search-input"
+            class="search-box__input"
+            placeholder="Enter name of author or book title"
+          />
+        </section>
+
+        <div class="manage-app__actions">
+          <button type="button" id="export-csv-btn" class="btn-export">
+            Export list of books
+          </button>
+        </div>
+
+        <section class="card-box">
+          <form class="card-box__form form-book">
+            <input
+              type="text"
+              id="book-title"
+              class="form-book__input"
+              placeholder="Book title.."
+              required
+            />
+            <select
+              name="book-author"
+              id="book-author"
+              class="form-book__select"
+            ></select>
+            <button type="submit" class="form-book__button">Add</button>
+          </form>
+
+          <ul class="card-box__list list-books"></ul>
+        </section>
+
+        <section
+          class="card-box card-box--hidden edit-box"
+          id="edit-box-container"
+        >
+          <h2 class="card-box__title">Edit book</h2>
+          <form class="card-box__form form-edit">
+            <input
+              type="text"
+              id="edit-book-title"
+              class="form-edit__input"
+              placeholder="New title"
+              required
+            />
+
+            <select
+              id="edit-book-author"
+              class="form-edit__select"
+              required
+            ></select>
+
+            <button type="submit" class="form-edit__button">Save</button>
+          </form>
+        </section>
+      </div>
+    </main>
 
     <script src="main.js"></script>
   </body>
