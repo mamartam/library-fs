@@ -71,5 +71,7 @@ Start the server using Node.js:
 `Connected to the database!
 Server: http://localhost:3000`
 
+## Video
+https://github.com/user-attachments/assets/d1bc677b-5ca1-411f-8101-76b640f94b10
 
 
